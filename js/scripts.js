@@ -4,22 +4,14 @@ var consonants = ["q","w","r","t","y","p","s","d","f","g","h","j","k","l","z","x
 var toVowels = "way"
 var toConsonants = "ay"
 
+function vowels(string) {
+  var wordArray = []
+  var splitString = string.split("");
+  if (vowels.includes(string.charAt(0))) {
+    wordArray.push(string + "way")
+  }
 
-function toString(str) {
-   var step1 = str.split(" ");
-   for(var i =0; i <step1.length; i++) {
-     if (vowels.indexOf(step1[i])>=0) {
-       step1[i] = step1[i] + toVowels
-     }
-   };
-   console.log("this is step1 " + step1)
-   return step1.join(step1);
-}
-
-
-
-
-
+  console.log(wordArray)
 
 //User Interface
 $(document).ready(function() {
@@ -31,3 +23,15 @@ $(document).ready(function() {
 
 
 });
+
+
+  return wordArray.concat(" ")
+}
+
+
+
+
+//  if (consonants.includes(string.charAt(0))) {
+//   wordArray.push(splitString.shift())
+//   wordArray.push("ay")
+// }
